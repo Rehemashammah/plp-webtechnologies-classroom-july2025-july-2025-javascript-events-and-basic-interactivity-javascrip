@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Interactive JS Assignment</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Interactive Web Page - JavaScript Practice</h1>
+            <div class="toggles">
+                <button id="darkToggle" aria-pressed="false">Toggle Dark Mode</button>
+                <button id="resetBtn">Reset Counter</button>
+            </div>
+        </header>
+
+        <main>
+            <!--Counter / Button game -->
+            <section class="card" id="counter-section">
+                <h2>Click Counter Game</h2>
+                <p>Click the button to earn points!</p>
+                <div class="counter-display" aria-live="polite" id="counterValue">0</div>
+                <div class="counter-controls">
+                    <button id="incrementBtn">+1 Point</button>
+                    <button id="doubleBtn">Double Points</button>
+                    <button id="stealBtn">Steal 2 Points (-2)</button>
+                </div>
+                <div id="counterMessage" class="message"></div>
+            </section>
+
+            <!--Tabbed Interface -->
+            <section class="card" id="tabs-section">
+                <h2>Tabbed Interface</h2>
+                <div class="tabs">
+                    <button class="tab-button active" data-target="tab1">Tab 1</button>
+                    <button class="tab-button" data-target="tab2">Tab 2</button>
+                    <button class="tab-button" data-target=tab32>Tab 3</button>
+                </div>
+                <div class="tab-panels">
+                    <div id="tab1" class="tab-panel hidden">This is content for Tab 1</div>
+                    <div id="tab2" class="tab-panel hidden">This is content for Tab 2</div>
+                    <div id="tab3" class="tab-panel hidden">This is content for Tab 3</div> 
+                </div>
+            </section>
+
+            <!--Form Validation-->
+            <section class="card" id="form-section">
+                <h2>Signup Form (with validation)</h2>
+                <form id="signupForm" novalidate>
+                    <label>
+                        Name:
+                        <input type="text" id="name" name="name" />
+                        <div class="error" id="nameError"></div>  
+                  </label>
+
+                  <label>
+                    Email:
+                    <input type="email" id="email" name="email" />
+                    <div class="error" id="emailError"></div>
+                  </label>
+
+                  <label>
+                    Password:
+                    <input type="password" id="password" name="password" />
+                    <div class="error" id="passwordError"></div>
+                  </label>
+
+                  <label class="checkbox">
+                    <input type="checkbox" id="agree" name="agree" />
+                    I agree to the terms and conditions.
+                  </label>
+                  <div class="error" id="agreeError"></div>
+
+                  <button type="submit" id="submitBtn">submit</button>
+                  </form>
+
+                  <div class="message" id="formMessage" aria-live="polite"></div>
+
+
+
+            </section>
+
+      
+        </main>
+
+        <footer>
+            <small>Made for learning event listeners, DOM Manipulation and Validation</small>
+        </footer>
+
+        <script src="script.js"></script>
+
+
+    </body>
+
+</html>
